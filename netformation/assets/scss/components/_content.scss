@@ -1,0 +1,43 @@
+
+#content {
+  background-color: #fafafb;
+  #inner-content {
+    &.article-page {
+      width: auto;
+      margin: 0 auto;
+    }
+  }
+
+}
+
+@media (max-width: 639px) {
+  #content {
+    background-color: #fafafb;
+
+    #sidebar1 {
+      width: 100%;
+    }
+
+    #inner-content {
+      &.article-page {
+        width: auto;
+        margin: 0 auto;
+        padding-top: 40px;
+      }
+    }
+  }
+}
+
+
+.category-page-wrapper, .search-page-wrapper {
+  padding: 40px 0;
+
+  .articles-box {
+    margin-bottom: 40px;
+    overflow: hidden;
+  }
+
+  .page-title {
+    margin-bottom: 1rem;
+  }
+}

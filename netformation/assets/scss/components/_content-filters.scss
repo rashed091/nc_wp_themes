@@ -1,0 +1,63 @@
+.content-filter-wrapper {
+  width: $global-width;
+  margin: 0 auto;
+}
+
+.content-filters {
+  background-color: white;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  text-align: center;
+  padding: 20px 0;
+
+  h5 {
+    display: inline-block;
+    padding: 8px 0 0 0;
+    margin: 0;
+    margin-right: 15px;
+  }
+
+  form {
+    padding: 0;
+  }
+
+  select {
+    margin-bottom: 0;
+    font-size: .9rem;
+    font-family: 'DIN Next LT Pro';
+    display: block;
+    width: 110px;
+    border-radius: 2px;
+    color: #737373;
+  }
+
+  .button {
+    display: block;
+    margin-bottom: 0;
+    font-family: 'DIN Next LT Pro Bold';
+    margin-right: 10px;
+  }
+  .form-item {
+    margin-right: 15px;
+    float: left;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.hideShowFilter {
+    font-size: 1.2rem;
+    line-height: 1;
+    margin: rem-calc(10) rem-calc(15);
+    background: #717372;
+    color: #fff;
+    padding: rem-calc(15) rem-calc(15);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.hideShowFilter h5 {
+  margin-bottom: 0;
+}

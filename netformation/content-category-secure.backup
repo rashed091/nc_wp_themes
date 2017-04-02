@@ -1,0 +1,28 @@
+<div class="row large-up-3 medium-up-1">
+	<?php query_posts('cat=1,2,3,4,5&showposts=3'); while (have_posts()) : the_post(); ?>
+	<div class="column featuredPost" id="test-eq"> <!-- Beginning of the individual post output -->
+			<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">
+
+				<section class="featured-image" itemprop="articleBody">
+					<?php the_post_thumbnail('small'); ?>
+				</section> <!-- end article section -->
+
+				<header class="article-header">
+					<h5 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" class="postHeadline" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h5>
+					<?php get_template_part( 'parts/content', 'byline' ); ?>
+				</header> <!-- end article header -->
+
+				<section class="entry-content postContent" itemprop="articleBody">
+					<?php the_excerpt(); ?>
+					<div class="row expanded">
+						<div class="large-4 medium-4 small-12"><p>Category</p></div>
+						<div class="large-4 medium-4 small-12"><p>Share</p></div>
+						<div class="large-4 medium-4 small-12"><p>A</p></div>
+					</div>
+				</section> <!-- end article section -->
+			</article> <!-- end article -->
+		</div> <!-- End of the complete post output -->
+
+	<?php endwhile; ?>
+	<?php wp_reset_query(); ?>
+	</div>

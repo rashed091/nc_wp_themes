@@ -1,0 +1,81 @@
+/* Social Bar In header althouguh may not be used in */
+.social-holder {
+  ul {
+    list-style-type: none;
+    overflow: auto;
+    margin-left: 0;
+    margin-bottom: 0;
+    float: left;
+  }
+
+  li {
+    list-style-type: none;
+    float: left;
+    width: rem-calc(40);
+    a {
+      display: block;
+      padding: 9px 11px 8px 11px;
+      border: 1px solid #FFFFFF;
+      border-right: 0;
+      color: #fff;
+      font-size: 18px;
+      text-align: center;
+      line-height: 1.1;
+
+      &:hover {
+        background-color: #fff;
+        color: $header-blue;
+      }
+    }
+
+    &:last-child {
+      a {
+        border-right: 1px solid #FFFFFF;
+      }
+    }
+
+  }
+}
+
+.single-social-links {
+  .facebook {
+    background-color: #3b5a9a;
+  }
+  .linkedin {
+    background-color: #4775b5;
+  }
+  .twitter {
+    background-color: #42c8f4;
+  }
+  .google-plus {
+    background-color: #c83d2d;
+  }
+  .email-social {
+    background-color: #717372;
+  }
+  .print-social {
+    background-color: #9a999a;
+
+  }
+
+  .facebook, .linkedin, .twitter, .google-plus, .email-social, .print-social {
+    color: #FFFFFF;
+    font-size: .8rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'DIN Next LT Pro';
+    padding: 13px 10px 9px 10px;
+    height: auto;
+    line-height: 1;
+    margin: 5px 0px;
+    border-radius: 2px;
+  }
+}
+
+@media screen and (max-width: 662px) {
+.social-holder {
+  li {
+    width: rem-calc(38);
+  }
+}
+}

@@ -1,0 +1,41 @@
+.image-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+a, a:visited {
+  transition:all 0.25s ease-out, color 0.25s ease-out;
+  // Mobile tap color
+  &:link {
+    //Highlight links on iOS, Similar to :hover for mobile devices.
+    -webkit-tap-highlight-color : rgba( 0, 0, 0, 0.3 );
+  }
+}
+
+#totop {
+  right: auto !important;
+  left: 40px !important;
+  background: #fff !important;
+  border: 1px solid #c5c4c5 !important;
+  border-radius: 1px !important;
+  color: #9a999a !important;
+  line-height: 41px !important;
+  font-size: 15px !important;
+
+}
+
+@media (max-width: 639px) {
+  #totop {
+    right: auto !important;
+    left: 10px !important;
+    background: #fff !important;
+    border: 1px solid #c5c4c5 !important;
+    border-radius: 1px !important;
+    color: #9a999a !important;
+    line-height: 41px !important;
+    font-size: 15px !important;
+    bottom: 10px !important;
+
+  }
+}

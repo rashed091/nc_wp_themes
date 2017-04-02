@@ -1,0 +1,50 @@
+.footer {
+  clear: both;
+  margin-top: 1em;
+  background-color: #0063a8;
+}
+
+.footerColumn {
+  margin-top: rem-calc(20);
+}
+
+.newsletter-form {
+
+  button {
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    height: 39px;
+    border-left: 0;
+    color: #0063a8;
+    padding: rem-calc(10);
+    width: rem-calc(80);
+    font-size: rem-calc(12);
+  }
+
+
+  input {
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-size: rem-calc(12);
+
+    &:focus {
+      background: transparent;
+      border: 1px solid #FFFFFF;
+    }
+
+    input[type=text] {
+      color: #FFFFFF;
+    }
+
+  }
+}
+
+.disclaimerText {
+  margin: rem-calc(10) rem-calc(15);
+
+  p {
+    color: #FFFFFF;
+    text-align: center;
+  }
+}

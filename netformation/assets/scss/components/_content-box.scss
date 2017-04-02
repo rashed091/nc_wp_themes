@@ -1,0 +1,88 @@
+.single-article-post {
+  border: 1px solid #c5c4c5;
+  background-color: #FFFFFF;
+  position: relative;
+
+  img {
+    padding: 0px;
+    margin: 0px;
+    max-height: rem-calc(140);
+    min-height: rem-calc(140);
+  }
+
+  .inner {
+    padding: 18px 20px 40px 20px;
+  }
+
+  .article-header {
+    line-height: 1.2;
+    padding: 0;
+
+    h5 {
+      font-family: 'DIN Next LT Pro Bold', "Helvetica Neue", Helvetica, sans-serif;
+      line-height: 1.2;
+      font-weight: bold;
+      font-size: rem-calc(17);
+
+      a {
+        color: #000;
+      }
+    }
+  }
+
+  section.entry-content {
+    p {
+      font-family: 'DIN Next LT Pro', "Helvetica Neue", Helvetica, sans-serif;
+      font-size: .9rem;
+      line-height: 1.5;
+      color: #434343;
+    }
+  }
+}
+
+@media screen and (min-width: 40em) and (max-width: 64em) {
+  .article-header {
+    h5 {
+      font-size: rem-calc(17);
+    }
+  }
+
+  .single-article-post {
+    min-height: 350px;
+  }
+
+  .featuredPost {
+    min-height: 360px;
+  }
+
+}
+
+@media screen and (min-width: 64em){
+  .article-header {
+    h5 {
+      font-size: 1.25rem;
+    }
+  }
+
+  .single-article-post, .featuredPost {
+    min-height: 300px;
+  }
+
+}
+
+// Ensure that the post content box doesn't become too tall with too much whitespace on mobile
+@media screen and (max-width: 40em){
+
+  .single-article-post, .featuredPost {
+    height: 310px;
+  }
+
+}
+
+// Ensure that category name doesn't overflow on content box
+.link-category-page {
+  a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

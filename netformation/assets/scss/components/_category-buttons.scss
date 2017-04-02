@@ -1,0 +1,73 @@
+.category-buttons {
+  .button-group {
+    margin-bottom: 20px;
+
+    .category-button {
+      background-color: #FFFFFF;
+      border: 1px solid #9a989a;
+      color: #9a989a;
+      text-transform: uppercase;
+      margin-right: 10px;
+      font-family: 'DIN Next LT Pro';
+      padding: 14px 15px 10px ;
+
+      &:last-child, &.left-arrow, &.right-arrow {
+        margin-right: 0;
+      }
+
+      &.left-arrow, &.right-arrow {
+        font-size: 20px;
+        line-height: 1;
+        padding: 8px 15px;
+      }
+
+      &.left-arrow {
+        border-right:0;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+
+      }
+
+      &.right-arrow {
+        border-bottom-left-radius: 0;
+        border-top-left-radius: 0;
+
+      }
+
+      &:hover {
+        background-color: #9a999a;
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+.category-icon {
+  background-position: left;
+  background-repeat: no-repeat;
+  padding-left: 30px;
+
+  &.connect {
+    background-image: url(../images/connect-icon.png);
+  }
+
+  &.featured {
+    background-image: url(../images/featured-icon-mobile.png);
+  }
+
+  &.secure {
+    background-image: url(../images/secure-icon.png);
+  }
+
+  &.transform {
+    background-image: url(../images/transform-icon.png);
+  }
+}
+
+
+.categoryTagline {
+      text-transform: uppercase;
+      font-family: 'DIN Next LT Pro';
+      font-size: rem-calc(12);
+}

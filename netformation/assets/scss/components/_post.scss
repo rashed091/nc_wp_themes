@@ -1,0 +1,273 @@
+// Post meta
+.byline {
+  color: #999;
+  text-transform: uppercase;
+  font-size: rem-calc(12);
+  margin-bottom: rem-calc(10);
+  font-family: 'DIN Next LT Pro';
+  time {
+  }
+}
+
+// Entry content
+.entry-content {
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .alignleft, img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left;
+  }
+  .alignright, img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right;
+  }
+  .aligncenter, img.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both;
+  }
+
+  video, object {
+    max-width: 100%;
+    height: auto;
+  }
+
+  pre {
+    background: #eee;
+    border: 1px solid #cecece;
+    padding: 10px;
+  }
+
+  div {
+    margin-bottom: 1rem;
+  }
+}
+
+.wp-caption {
+  max-width: 100%;
+  background: #eee;
+  padding: 5px;
+
+  // Images inside wp-caption
+  img {
+    max-width: 100%;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  p.wp-caption-text {
+    font-size: 0.85em;
+    margin: 4px 0 7px;
+    text-align: center;
+  }
+}
+
+// Add Foundation styling to password protect button
+.post-password-form input[type="submit"] {
+  @include button;
+}
+
+.respond-form {
+  margin: 1.5em 10px;
+  padding-bottom: 2.2em;
+
+  form {
+    margin: 0.75em 0;
+
+    li {
+      list-style-type: none;
+      clear: both;
+      margin-bottom: 0.7335em;
+
+      label,
+      small {
+        display: none;
+      }
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=url],
+    textarea {
+      padding: 3px 6px;
+      background: #efefef;
+      border: 2px solid #cecece;
+      line-height: 1.5em;
+
+      &:focus {
+        background: #fff;
+      }
+
+      // form validation
+      &:invalid {
+        outline: none;
+        border-color: #fbc2c4;
+        background-color: #f6e7eb;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -ms-box-shadow: none;
+        box-shadow: none;
+      }
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=url] {
+      max-width: 400px;
+      min-width: 250px;
+    }
+
+    textarea {
+      resize: none;
+      width: 97.3%;
+      height: 150px;
+    }
+
+  }
+}
+
+// comment form title
+#comment-form-title {
+  margin: 0 0 1.1em;
+}
+
+// allowed tags
+#allowed_tags {
+  margin: 1.5em 10px 0.7335em 0;
+}
+
+// No comments
+.nocomments {
+  margin: 0 20px 1.1em;
+}
+
+.gform_body ul {
+  list-style: none outside none;
+  margin: 0;
+}
+
+.postHeadline, .postHeadline:hover {
+  color: #000000;
+  font-size: rem-calc(18);
+
+}
+
+.mobileIcon {
+  margin: 20px 10px 20px 35px;
+}
+
+/* Modelling of mobile menu container for mobile devices so to add a border beside menu icon on m. devices */
+
+.categoryTitle {
+  margin-top: 2px;
+  text-transform: uppercase;
+  font-family: 'DIN Next LT Pro';
+  font-size: 1.4rem;
+  list-style-type: none;
+  padding-top: 5px;
+}
+
+.singlePostContent .article-header {
+  padding-left: 0px;
+}
+
+.featured-image-single {
+  background-position: 50% 50%;
+  background-size: cover;
+
+}
+
+/* Media query to ensure that single post content area is normal compared to the desktop version of negative margin  */
+@media screen and (min-width: 40em) {
+  .singlePostContent {
+    background-color: #FFFFFF;
+    border: 1px solid #b0aeaf;
+    padding: 2.0rem;
+    font-family: 'DIN Next LT Pro';
+    margin-bottom: 40px;
+  }
+
+  #main-article {
+    position: relative;
+    top: -35px;
+  }
+}
+
+.tags {
+
+  .tags-title {
+    margin-bottom: 20px;
+    line-height: 1;
+  }
+
+  a {
+    padding: 10px 16px 7px;
+    background-color: gray;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-family: 'DIN Next LT Pro';
+    display: inline-block;
+    margin: 10px 10px 0 0;
+    line-height: 1;
+  }
+}
+
+.article-top-info {
+  background: #fff;
+
+  span {
+    display: block;
+    border-right: 1px solid #b0aeaf;
+    border-top: 1px solid #b0aeaf;
+    padding: 8px 15px 5px 15px;
+    font-family: 'DIN Next LT Pro';
+    text-align: center;
+    font-size: .9rem;
+    text-transform: uppercase;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 35px;
+
+    &.icons-container {
+      padding: 6px 15px 4px;
+    }
+  }
+
+  div {
+    &:first-child {
+      span {
+        border-left: 1px solid #b0aeaf;
+      }
+    }
+  }
+
+}
+
+// Ensure that the Category Link in the article header is Black
+
+.categoryLink a {
+  color: #000000;
+}
+
+.share-icons-holder {
+  i {
+    font-size: rem-calc(15);
+  }
+}
+
+// Related Posts Styling At End Of post
+
+.relatedPosts {
+  margin-top: rem-calc(30);
+
+  h4 {
+    margin-left: rem-calc(12);
+  }
+}
