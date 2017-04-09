@@ -762,7 +762,7 @@ th {
   padding: 0; }
 
 .foundation-mq {
-  font-family: "small=0em&medium=40em&large=64.0625em&xlarge=75em&xxlarge=90em"; }
+  font-family: "small=0em&medium=40em&large=64em&xlarge=75em&xxlarge=90em"; }
 
 html {
   font-size: 100%;
@@ -850,7 +850,7 @@ button {
       .row .row {
         margin-left: -0.625rem;
         margin-right: -0.625rem; } }
-    @media screen and (min-width: 64.0625em) {
+    @media screen and (min-width: 64em) {
       .row .row {
         margin-left: -0.78125rem;
         margin-right: -0.78125rem; } }
@@ -872,7 +872,7 @@ button {
     .column, .columns {
       padding-left: 0.625rem;
       padding-right: 0.625rem; } }
-  @media screen and (min-width: 64.0625em) {
+  @media screen and (min-width: 64em) {
     .column, .columns {
       padding-left: 0.78125rem;
       padding-right: 0.78125rem; } }
@@ -1362,7 +1362,7 @@ button {
     margin-right: 0;
     float: left; } }
 
-@media screen and (min-width: 64.0625em) {
+@media screen and (min-width: 64em) {
   .large-1 {
     width: 8.33333%; }
   .large-push-1 {
@@ -1792,7 +1792,7 @@ kbd {
   .medium-text-justify {
     text-align: justify; } }
 
-@media screen and (min-width: 64.0625em) {
+@media screen and (min-width: 64em) {
   .large-text-left {
     text-align: left; }
   .large-text-right {
@@ -1858,13 +1858,7 @@ kbd {
     widows: 3; }
   h2,
   h3 {
-    page-break-after: avoid; }
-
-    #social-icons-mobile-header {
-      display: none !important;
-    }
-
-  }
+    page-break-after: avoid; } }
 
 [type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'],
 textarea {
@@ -1899,10 +1893,6 @@ textarea {
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  color: #cacaca; }
-
-input::-moz-placeholder,
-textarea::-moz-placeholder {
   color: #cacaca; }
 
 input:-ms-input-placeholder,
@@ -2223,27 +2213,27 @@ select {
   .show-for-medium {
     display: none !important; } }
 
-@media screen and (min-width: 40em) and (max-width: 64em) {
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
   .hide-for-medium-only {
     display: none !important; } }
 
-@media screen and (max-width: 39.9375em), screen and (min-width: 64.0625em) {
+@media screen and (max-width: 39.9375em), screen and (min-width: 64em) {
   .show-for-medium-only {
     display: none !important; } }
 
-@media screen and (min-width: 64.0625em) {
+@media screen and (min-width: 64em) {
   .hide-for-large {
     display: none !important; } }
 
-@media screen and (max-width: 64em) {
+@media screen and (max-width: 63.9375em) {
   .show-for-large {
     display: none !important; } }
 
-@media screen and (min-width: 64.0625em) and (max-width: 74.9375em) {
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
   .hide-for-large-only {
     display: none !important; } }
 
-@media screen and (max-width: 64em), screen and (min-width: 75em) {
+@media screen and (max-width: 63.9375em), screen and (min-width: 75em) {
   .show-for-large-only {
     display: none !important; } }
 
@@ -2491,7 +2481,7 @@ select {
       width: auto; }
       .button-group.stacked-for-small .button:not(:last-child) {
         margin-right: 1px; } }
-  @media screen and (min-width: 64.0625em) {
+  @media screen and (min-width: 64em) {
     .button-group.stacked-for-medium .button {
       width: auto; }
       .button-group.stacked-for-medium .button:not(:last-child) {
@@ -2744,7 +2734,7 @@ select {
     border-left-style: solid;
     border-right-width: 0; } }
 
-@media screen and (min-width: 64.0625em) {
+@media screen and (min-width: 64em) {
   .dropdown.menu.large-horizontal > li.opens-left > .is-dropdown-submenu {
     left: auto;
     right: 0;
@@ -2960,7 +2950,7 @@ select {
       display: table-cell; }
     .menu.medium-vertical > li {
       display: block; } }
-  @media screen and (min-width: 64.0625em) {
+  @media screen and (min-width: 64em) {
     .menu.large-horizontal > li {
       display: table-cell; }
     .menu.large-vertical > li {
@@ -3132,7 +3122,7 @@ body {
     .position-right.reveal-for-medium ~ .off-canvas-content {
       margin-right: 250px; } }
 
-@media screen and (min-width: 64.0625em) {
+@media screen and (min-width: 64em) {
   .position-left.reveal-for-large {
     left: 0;
     z-index: auto;
@@ -3225,7 +3215,7 @@ body {
   .pagination::after {
     clear: both; }
   .pagination li {
-    font-size: 1.375rem;
+    font-size: 0.875rem;
     margin-right: 0.0625rem;
     border-radius: 0;
     display: none; }
@@ -3239,17 +3229,14 @@ body {
     color: #0a0a0a;
     display: block;
     padding: 0.1875rem 0.625rem;
-    border-radius: 0;
-    font-family: 'DIN Next LT Pro';
-    text-transform: uppercase;}
+    border-radius: 0; }
     .pagination a:hover,
     .pagination button:hover {
       background: #e6e6e6; }
   .pagination .current {
-    padding: 0.1875rem 0.825rem;
-    background: #0063a8;
-    border-radius: 5px;
-    color: #FFFFFF;
+    padding: 0.1875rem 0.625rem;
+    background: #9a999a;
+    color: #0a0a0a;
     cursor: default; }
   .pagination .disabled {
     padding: 0.1875rem 0.625rem;
@@ -3620,7 +3607,7 @@ table {
   table tbody td {
     padding: 0.5rem 0.625rem 0.625rem; }
 
-@media screen and (max-width: 64em) {
+@media screen and (max-width: 63.9375em) {
   table.stack thead {
     display: none; }
   table.stack tfoot {
@@ -3856,7 +3843,7 @@ table.hover tr:nth-of-type(even):hover {
     .top-bar .top-bar-left,
     .top-bar .top-bar-right {
       width: auto; } }
-  @media screen and (max-width: 64em) {
+  @media screen and (max-width: 63.9375em) {
     .top-bar.stacked-for-medium .top-bar-left,
     .top-bar.stacked-for-medium .top-bar-right {
       width: 100%; } }
@@ -3959,10 +3946,6 @@ a, a:visited {
   font-size: 15px !important; }
 
 @media (max-width: 639px) {
-  .postContent a {
-    font-size: .7em !important;
-    padding: 0.425rem !important;
-  }
   #totop {
     right: auto !important;
     left: 10px !important;
@@ -3972,15 +3955,7 @@ a, a:visited {
     color: #9a999a !important;
     line-height: 41px !important;
     font-size: 15px !important;
-    bottom: 10px !important; }
-
-      .social-holder {
-        float: none;
-        width: 200px;
-        margin: 0 auto;
-      }
-}
-
+    bottom: 10px !important; } }
 
 /* Social Bar In header althouguh may not be used in */
 .social-holder ul {
@@ -4162,18 +4137,7 @@ a, a:visited {
     margin: 20px 20px 0; } }
 
 .siteLogo {
-  margin-top: 1.125rem;
-  height: 100%; }
-
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /* IE10+ CSS styles go here */
-  .navigation-links li a {
-    float: left; }
-  .siteLogo img {
-    height: 100%; } }
-
-.pageContent {
-  padding: 3.4%; }
+  margin-top: 1.125rem; }
 
 .category-buttons .button-group {
   margin-bottom: 20px; }
@@ -4218,14 +4182,10 @@ a, a:visited {
 .categoryTagline {
   text-transform: uppercase;
   font-family: 'DIN Next LT Pro';
-  font-size: 0.8rem;
-  display:inline-block;
-  margin-top: 14px;
-  padding-left: 10px;}
+  font-size: 0.75rem; }
 
 #content {
-  background-color: #fafafb;
-  margin-bottom: 1em; }
+  background-color: #fafafb; }
   #content #inner-content.article-page {
     width: auto;
     margin: 0 auto; }
@@ -4238,13 +4198,7 @@ a, a:visited {
     #content #inner-content.article-page {
       width: auto;
       margin: 0 auto;
-      padding-top: 40px; }
-
-.single-article-post {
-  height: auto !important;
-}
-
-}
+      padding-top: 40px; } }
 
 .category-page-wrapper, .search-page-wrapper {
   padding: 40px 0; }
@@ -4257,8 +4211,7 @@ a, a:visited {
 .single-article-post {
   border: 1px solid #c5c4c5;
   background-color: #FFFFFF;
-  position: relative;
-}
+  position: relative; }
   .single-article-post img {
     padding: 0px;
     margin: 0px;
@@ -4284,26 +4237,25 @@ a, a:visited {
 
 @media screen and (min-width: 40em) and (max-width: 64em) {
   .article-header h5 {
-    font-size: 1.0625rem;
-  }
-
+    font-size: 1.0625rem; }
+  .single-article-post {
+    min-height: 350px; }
   .featuredPost {
-    min-height: 360px;
-  }
-}
+    min-height: 360px; } }
 
 @media screen and (min-width: 64em) {
   .article-header h5 {
     font-size: 1.25rem; }
-
-}
-
-/*@media screen and (max-width: 40em) {
   .single-article-post, .featuredPost {
-    height: 345px;
-  }
-}*/
+    min-height: 300px; } }
 
+@media screen and (max-width: 40em) {
+  .single-article-post, .featuredPost {
+    height: 310px; } }
+
+.link-category-page a {
+  overflow: hidden;
+  text-overflow: ellipsis; }
 
 .byline {
   color: #999;
@@ -4449,9 +4401,7 @@ a, a:visited {
   font-family: 'DIN Next LT Pro';
   font-size: 1.4rem;
   list-style-type: none;
-  padding-top: 5px;
-  float: left;
-  display: inline-block;}
+  padding-top: 5px; }
 
 .singlePostContent .article-header {
   padding-left: 0px; }
@@ -4472,10 +4422,6 @@ a, a:visited {
     position: relative;
     top: -35px; } }
 
-    .tags {
-      margin-bottom: 20px;
-    }
-
 .tags .tags-title {
   margin-bottom: 20px;
   line-height: 1; }
@@ -4492,7 +4438,7 @@ a, a:visited {
 
 .article-top-info {
   background: #fff; }
-  .article-top-info span, .article-top-info .authorName {
+  .article-top-info span {
     display: block;
     border-right: 1px solid #b0aeaf;
     border-top: 1px solid #b0aeaf;
@@ -4503,10 +4449,8 @@ a, a:visited {
     text-transform: uppercase;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 35px;
-    margin: 0;
-    white-space: nowrap; }
-    .article-top-info span.icons-container, .article-top-info .authorName.icons-container {
+    height: 35px; }
+    .article-top-info span.icons-container {
       padding: 6px 15px 4px; }
   .article-top-info div:first-child span {
     border-left: 1px solid #b0aeaf; }
@@ -4515,9 +4459,7 @@ a, a:visited {
   color: #000000; }
 
 .share-icons-holder i {
-  font-size: 0.9375rem;
-  color: rgba(68, 68, 68, 0.84);
-}
+  font-size: 0.9375rem; }
 
 .relatedPosts {
   margin-top: 1.875rem; }
@@ -4546,7 +4488,7 @@ a, a:visited {
         color: #000000;
         font-family: 'DIN Next LT Pro';
         padding: 8px 20px 5px 20px;
-        margin: 0px 0; }
+        margin: 4px 0; }
         .navigation-links ul li a:hover {
           background-color: #1e376d;
           color: #FFFFFF; }
@@ -4612,7 +4554,7 @@ a, a:visited {
   clear: both;
   font-family: 'DIN Next Pro';
   border-bottom: 1px solid #262626;
-  background: rgba(0, 0, 0, 0.81);
+  background: rgba(0, 0, 0, 0.53);
   line-height: 1.3;
   display: none;
   padding-top: 20px;
@@ -4717,6 +4659,7 @@ html[data-top-bar-hover=transform] #menu-main-navigation-1 .menu-item.transform:
 
 .footer {
   clear: both;
+  margin-top: 1em;
   background-color: #0063a8; }
 
 .footerColumn {
@@ -4790,7 +4733,7 @@ html[data-top-bar-hover=transform] #menu-main-navigation-1 .menu-item.transform:
   bottom: 0;
   right: 0;
   left: 0;
-  background: white;}
+  background: white; }
   .postContent p {
     font-size: 0.875rem;
     font-family: 'DIN Next LT Pro Bold', Helvetica, Arial, sans-serif;
@@ -4806,45 +4749,22 @@ html[data-top-bar-hover=transform] #menu-main-navigation-1 .menu-item.transform:
     display: none; }
     .postContent .article-share-links-container .share-icons-holder a {
       display: block;
-      padding: .47rem;
+      padding: 7px;
       font-size: 0.875rem;
       border-right: 1px solid #c5c4c5;
       float: left;
-      overflow: hidden;
-      max-height: 100%;}
+      max-height: 32px;
+      min-height: 32px; }
       .postContent .article-share-links-container .share-icons-holder a:last-child {
         border-right: 0; }
       .postContent .article-share-links-container .share-icons-holder a.facebook-icn {
-        padding: .47rem; }
+        padding: 7px 10px; }
       .postContent .article-share-links-container .share-icons-holder a.linkedin-icn {
-        padding: .47rem; }
+        padding: 7px 10px; }
       .postContent .article-share-links-container .share-icons-holder a.envelope-icn {
-        padding: .47rem; }
+        padding: 7px 9px; }
       .postContent .article-share-links-container .share-icons-holder a.print-icn {
-        padding: .47rem;
-        border-right: 0 !important; }
-        /* Hover States For Icons */
-
-        a.facebook-icn:hover {
-          color: #3b5a9a;
-        }
-
-        a.linkedin-icn:hover {
-          color: #4775b5;
-        }
-
-        a.twitter-icn:hover {
-          color: #42c8f4;
-        }
-
-        a.envelope-icn:hover {
-          color: #717372;
-        }
-
-        a.print-icn:hover {
-          color: #9a999a;
-        }
-
+        padding: 7px 11px; }
   .postContent .article-share-links-container p.show-share-icons {
     padding: 10px 0;
     cursor: pointer;
@@ -4880,29 +4800,16 @@ html[data-top-bar-hover=transform] #menu-main-navigation-1 .menu-item.transform:
       display: block;
       vertical-align: middle;
       color: #919191;
-      text-transform: uppercase;}
+      text-transform: uppercase;
+      overflow: hidden;
+      text-overflow: ellipsis; }
     .feature-links-container .columns span {
       padding: 0.625rem;
       margin: 0;
-      display: block; }
+      display: block;
+      height: 35px; }
   .feature-links-container .link-category-page:hover {
     background-color: #01a1dd; }
-
-    .featured-articles .link-category-page a {
-      padding: 0.4em;
-    }
-/* Set width of category link (on the homepage slider) so that splits into two lines */
-
-    .featured-articles .link-category-page a {
-      width: 64%;
-      margin: 0 auto;
-    }
-
-/* Set Add a padding to the 'View All' link on the category part beside social in order to center it */
-
-    .featured-articles .link-category-page a:hover {
-      padding-top: 10%;
-    }
 
 .featured-articles {
   width: 87%; }
@@ -5059,151 +4966,95 @@ html[data-top-bar-hover=transform] #menu-main-navigation-1 .menu-item.transform:
   margin-bottom: 0;
   position: relative; }
 
-  @media screen and (max-width: 768px) {
-    .category .most-popular .image {
-      width: 40%;
-      height: auto;
-    }
+/******************************************************************
 
-    .category .most-popular h6 {
-      font-size: .9rem;
-    }
-  }
+Stylesheet: Retina Screens & Devices Stylesheet
 
-/* Breakpoint to ensure tagline stays on one line, so we hide the HideSHOW button  */
+When handling retina screens you need to make adjustments, especially
+if you're not using font icons. Here you can add them in one neat
+place.
 
-/* Reduce categorytagline font size even further as view port decreases
--- to avoid it jumping down onto a new line  */
-@media screen and (max-width: 773px) {
-  #content-category-connect .categoryTagline {
-    font-size: 0.75rem;
-  }
+******************************************************************/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+  /* 
+
+EXAMPLE 
+Let's say you have an image and you need to make sure it looks ok
+on retina screens. Let's say we have an icon which dimension are
+24px x 24px. In your regular stylesheets, it would look something
+like this:
+
+.icon {
+	width: 24px;
+	height: 24px;
+	background: url(img/test.png) no-repeat;
 }
 
+For retina screens, we have to make some adjustments, so that image
+doesn't look blurry. So, taking into account the image above and the
+dimensions, this is what we would put in our retina stylesheet:
 
-/* Sidebar Newsletter Styling - 100117 */
-
-.sidebar-newsletter {
-  margin-bottom: 0 !important;
-  padding-top: 12px !important;
-  background-color: #0063a8 !important;
-  font-size: .9rem !important;
+.icon {
+	background: url(img/test@2x.png) no-repeat;
+	background-size: 24px 24px;
 }
 
-@media screen and (max-width: 631px) {
-  .social-holder {
-    float:none;
-    text-align:center;
-  }
-}
+So, you would create the same icon, but at double the resolution, meaning 
+it would be 48px x 48px. You'd name it the same, but with a @2x at the end
+(this is pretty standard practice). Set the background image so it matches
+the original dimensions and you are good to go. 
 
-/* Remove border on final element of social share icons in single content box */
+*/ }
 
-.postContent .envelope-icn {
-  border-right: 0px;
-}
+/******************************************************************
 
-/* Ensure margin bottom tags */
+Stylesheet: Print Stylesheet
 
-.tags {
-  margin-bottom: 20px;
-}
+This is the print stylesheet. There's probably not a lot
+of reasons to edit this stylesheet. 
 
-/* reduce featured-image size when under 425px */
-
-@media screen and (max-width: 425px) {
-  .featured-image {
-    height: 120px;
-  }
-
-  .social-holder {
-    float: none;
-    width: 200px;
-    margin: 0 auto;
-  }
-}
-
-/* change colour of mobile menu container to same as rest of the site */
-.menu-mobile-category-page-menu-container {
-  background: #fafafb;
-}
-
-/* remove margins on mobile to prevent big gap */
-
-@media screen and (max-width: 64em) {
-  #sidebar1 {
-    margin-top: 0px;
-  }
-
-  .category-page-wrapper {
-    padding-top: 0px !important;
-  }
-}
-
-/* slightly reduce font size of main menu nav to fit in on resolution between 1025 and 1104px */
-
-@media screen and (min-width: 1025px) and (max-width: 1104px) {
-#menu-main-navigation-1 li a {
-  font-size: 1.0rem;
-}
-}
-
-/* Class for footer text (contact us, and investor relations) */
-
-.footerLinks {
-  display:inline-block;
-  margin-bottom:5px;
-  margin-top: 39px;
-  color:#FFFFFF;
-  font-family: 'DIN Next LT Pro';
-  text-transform: uppercase;
-  color: #FFFFFF;
-  font-size: 15px;
-}
-
-/* Resize footer links on various viewports */
-
-@media screen and (max-width: 850px) {
-  .footerLinks {
-    font-size: 14px;
-  }
-}
-
-@media screen and (min-width: 639px) and (max-width: 743px) {
-  .footerLinks {
-    font-size: 11px;
-  }
-}
-
-/* Remove 64% width of category names in article box and revert to auto width in order to center it, and also avoid overspill */
-
-@media screen and (max-width: 1300px) {
-  .featured-articles .link-category-page a {
-    width: auto !important;
-  }
-}
-
-/* Edit styling of author widget */
-
-#mks_author_widget-2 {
-  margin-bottom: 20px !important;
-}
-
-#mks_author_widget-2 p {
-  float: left;
-  margin-top: 5px !important;
-}
-
-.mks_autor_link_wrap a {
-  background: #9a999a !important;
-  padding: 5px 10px;
-  color: #FFFFFF;
-}
-
-.author .mks_autor_link_wrap {
-  display: none;
-}
-
-.author #mks_author_widget-2 p {
-  float: none;
-}
+Remember to add things that won't make sense to print at 
+the bottom. Things like nav, ads, and forms shouldbe set 
+to display none.
+******************************************************************/
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important; }
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline; }
+    a:after, a:visited:after {
+      content: " (" attr(href) ")"; }
+    a abbr[title]:after, a:visited abbr[title]:after {
+      content: " (" attr(title) ")"; }
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group; }
+  tr, img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  @page {
+    margin: 0.5cm; }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; }
+  .sidebar,
+  .page-navigation,
+  .wp-prev-next,
+  .respond-form,
+  nav {
+    display: none; } }

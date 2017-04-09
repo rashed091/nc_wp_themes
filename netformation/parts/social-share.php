@@ -1,7 +1,7 @@
 <div class="social-holder">
     <ul>
         <li>
-            <a href="http://facebook.com/Level3"><i class="fa fa-facebook" aria-hidden="true">Hello</i></a>
+            <a href="http://facebook.com/Level3"><i class="fa fa-facebook" aria-hidden="true"></i></a>
         </li>
         <li>
             <a href="https://www.linkedin.com/company/level-3-communications"><i class="fa fa-linkedin" aria-hidden="true"></i></a>

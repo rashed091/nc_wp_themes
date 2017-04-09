@@ -6,14 +6,6 @@ jQuery(document).foundation();
 
 jQuery(document).ready(function () {
 
-  // Change current mobile menu page "selected" attribute to be that of the current URL
-
-  jQuery(".mobile-menu option").each(function () {
-    if (jQuery(this).val() === window.location.toString()) {
-        jQuery(this).prop('selected', true);
-    }
-});
-
   // Remove empty P tags created by WP inside of Accordion and Orbit
   jQuery('.accordion p:empty, .orbit p:empty').remove();
 
@@ -32,21 +24,11 @@ jQuery(document).ready(function () {
   jQuery('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToScroll: 1,
-      }
-    },
-    {
-      breakpoint: 640,
-      settings: 'unslick'
-  }
-    ],
     arrows: true,
     fade: true,
     asNavFor: '.slider-nav',
+    autoplay: false,
+    autoplaySpeed: 8000,
     centerMode: true,
     adaptiveHeight: false,
   });
@@ -56,36 +38,15 @@ jQuery(document).ready(function () {
     howManySlidesToShow = 2;
   }
 
-  jQuery('.slider').slick({
+  jQuery('.slider-nav').slick({
     slidesToShow: howManySlidesToShow,
-    autoplay: true,
     slidesToScroll: 1,
-    autoplaySpeed: 3000,
-    responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-    breakpoint: 600,
-    settings: {
-      slidesToShow: 1,
-      slidesToScroll: 1
-    }
-  }],
-    asNavFor: '.slider',
+    asNavFor: '.slider-for',
     dots: true,
     centerMode: false,
     focusOnSelect: true,
     arrows: true,
     adaptiveHeight: false,
-    autoplay: true
-
   });
 
   jQuery(".search-on-button").click(function () {
@@ -121,10 +82,10 @@ jQuery(document).ready(function () {
   jQuery('#filterPosts').on('click', function () {
 
     // get the category/'industry' name -
-    var selectCat = jQuery('.form-items #categories');
+    var selectCat = jQuery('.form-item #categories');
     var selectedCat = jQuery(selectCat).val();
     // if the category is not set, leave the paramter blank
-    if (selectedCat === null) {
+    if (selectedCat === '') {
       selectedCat = '';
     } else {
       selectedCat = selectedCat;
@@ -144,12 +105,9 @@ jQuery(document).ready(function () {
     var selectDate = jQuery('.form-item #date');
     var selectedDate = jQuery(selectDate).val();
     //split the wp_get_archive url value
-    console.log(selectedDate);
+    var urlArray = selectedDate.split("/");
     // if the date is not set, leave the paramter blank
-    if(selectedDate != null) {
-      var urlArray = selectedDate.split("/");
-    }
-    if (selectedDate == null) {
+    if (selectedDate === '') {
       var month = '';
       var year = '';
     } else {
@@ -157,67 +115,16 @@ jQuery(document).ready(function () {
       var month = urlArray[4];
       var year = urlArray[3];
     }
+
     //create the search query. include post type to keep pages from returning
     var searchQuery = '/?s&category_name=' + selectedCat + '&tag=' + selectedTag + '&monthnum=' + month + '&year=' + year + '&post_type=post';
 
     //load the search and fire off the search query to render the search page with the relevant tags
     document.location.href = searchQuery;
-  });
-
-  // filter -- FOR MOBILE DEVICES ONLY, SMALL FOUNDATION VIEWPORT -- query on homepage by category, tag and date (added by kevin doocey friday september 23rd)
-  jQuery('#filterPostsMobile').on('click', function () {
-    // get the category/'industry' name -
-    var selectCat = jQuery('#mobileContentFilter .form-item #categories');
-    var selectedCat = jQuery(selectCat).val();
-    // if the category is not set, leave the paramter blank
-    if (selectedCat === null) {
-      selectedCat = '';
-    } else {
-      selectedCat = selectedCat;
-    }
-
-    //get the tag name
-    var selectTag = jQuery('#mobileContentFilter .form-item #tags');
-    var selectedTag = jQuery(selectTag).val();
-    // if the tag is not set, leave the paramter blank
-    if (selectedTag === null) {
-      selectedTag = '';
-    } else {
-      selectedTag = selectedTag;
-    }
-
-    //get the date
-    var selectDate = jQuery('#mobileContentFilter .form-item #date');
-    var selectedDate = jQuery(selectDate).val();
-    //split the wp_get_archive url value
-    console.log(selectedDate);
-    // if the date is not set, leave the paramter blank
-    if(selectedDate != null) {
-      var urlArray = selectedDate.split("/");
-    }
-    if (selectedDate == null) {
-      var month = '';
-      var year = '';
-    } else {
-      //set the month number and year parameters
-      var month = urlArray[4];
-      var year = urlArray[3];
-    }
-    //create the search query. include post type to keep pages from returning
-    var searchQuery = '/?s&category_name=' + selectedCat + '&tag=' + selectedTag + '&monthnum=' + month + '&year=' + year + '&post_type=post';
-
-    //load the search and fire off the search query to render the search page with the relevant tags
-    document.location.href = searchQuery;
-  });
-
-  // Slide Toggle For Mobile Content filter
-
-  jQuery(".hideShowFilter").click(function () {
-    jQuery(".mobileContentFilterContainer").slideToggle();
   });
 
   ////
-  // Top Bar Hover for drop-down navigation
+  // Top Bar Hover for drop-down navigation (not working currently)
 
   var aouthide = false;
   var barouthide = false;
@@ -228,14 +135,14 @@ jQuery(document).ready(function () {
 
     if(jQuery(this).is('a')){
       if (jQuery(this).parent().hasClass('connect-category-icon')) {
-        currentCategory = 'industry-perspectives';
-        jQuery('.top-bar-hover.' + currentCategory).show();
+        currentCategory = 'inform';
+        jQuery('.top-bar-hover.' + currentCategory).slideDown();
       } else if (jQuery(this).parent().hasClass('secure-category-icon')) {
-        currentCategory = 'your-it-reality';
-        jQuery('.top-bar-hover.' + currentCategory).show();
+        currentCategory = 'perform';
+        jQuery('.top-bar-hover.' + currentCategory).slideDown();
       } else {
-        currentCategory = 'level-3-pov';
-        jQuery('.top-bar-hover.' + currentCategory).show();
+        currentCategory = 'transform';
+        jQuery('.top-bar-hover.' + currentCategory).slideDown();
       }
     }
     aouthide = true;
@@ -245,7 +152,7 @@ jQuery(document).ready(function () {
     aouthide = false;
     barouthide = false;
     setTimeout(function () {
-      if (!aouthide && !barouthide) jQuery('.top-bar-hover').stop().hide();
+      if (!aouthide && !barouthide) jQuery('.top-bar-hover').stop().slideUp(), 100;
     });
   });
 
@@ -258,12 +165,6 @@ jQuery(document).ready(function () {
     autoplay: false,
     adaptiveHeight: true,
     responsive: [
-      {
-        breakpoint: 900,
-        settings: {
-          slidesToShow: 3,
-        }
-      },
       {
         breakpoint: 640,
         settings: 'unslick'
@@ -324,13 +225,7 @@ jQuery(document).ready(function () {
       {
         breakpoint: 640,
         settings: 'unslick'
-      },
-      {
-        breakpoint: 900,
-        settings: {
-          slidesToShow: 3,
-        }
-      },
+      }
     ],
     arrows: true,
     appendDots: false,
@@ -338,10 +233,35 @@ jQuery(document).ready(function () {
     nextArrow: jQuery("#content-category-transform .right-arrow")
   });
 
-// Article Printing
-  var printTheArticle =
-  jQuery('.print-link-social, .singlePostContent .fa-print a').on('click', function () {
-    jQuery(".singlePostContent").print();
-  });
+  // jQuery('.articles-box .rows-of-posts.two').slick({
+  //     dots: false,
+  //     infinite: true,
+  //     speed: 300,
+  //     slidesToShow: 2,
+  //     autoplay: true,
+  //     adaptiveHeight: true,
+  //     responsive: [
+  //         {
+  //             breakpoint: 640,
+  //             settings: 'unslick'
+  //         }
+  //     ],
+  //     arrows: false,
+  //     appendDots: false
+  // });
+
+
+  // var inArr = {a:false,b:false};
+  //
+  // $('#a, #b').mouseover(function(){
+  //     inArr [$(this).attr('id')] = true;
+  // });
+  //
+  //
+  // $('#a, #b').mouseout(function(){
+  //     inArr [$(this).attr('id')] = false;
+  //
+  //     setTimeout(function(){ if(!inArr.a && !inArr.b) $('#box').fadeOut(800) },100);
+  // });
 
 });
